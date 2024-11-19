@@ -1,27 +1,26 @@
 <?php
 
-require "../config/database.php";
-require "../models/Usuario.php";
+require "../..config/bd.php";
+require "../..models/Usuario.php";
 
 class ControllerUsuario{
-    protected $tabela = 'usuario';
+    public $usuario;
+    public $conexao;
+
+    public function conectarBd() {
+        $this->conexao = (new bd())->conectar ();
+        return $this->conexao();
+    }
 
     public function cadastrar($nome, $data_nascimento, $email, $senha, $endereco) {
-        $database = new Banco();
-        $bd = $database->conectar();
+        $usuario = new Usuario($this->conectarBd());
+        $query = $usuario->cadastrar();
 
-        $usuario = new Usuario($bd);
-        $usuario->nome = $nome;
-        $usuario->data_nascimento = $data_nascimento;
-        $usuario->email = $email;
-        $usuario->senha = $senha;
-        $usuario->endereco = $endereco;
+        $stmt = $this->conexao->prepare($query);
+        $senhahash = password_hash($senha, PASSWORD_BCRYPT);
+        $stmt->bird_param("sssss", $nome, $data_nascimento, $email, $senhahash, $endereco);
+        $stmt->execute();
 
-        if($usuario->cadastrar()) {
-            header('Location: index.php');
-            exit();
-        } else {
-            echo "Erro ao cadastrar usuario";    
-        }
+        $this->conexao->close();
     }
 }

@@ -11,6 +11,7 @@
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
         }
+
         div{
             background-color: rgba(0, 0, 0, 0.6);
             position: absolute;
@@ -21,14 +22,16 @@
             border-radius: 15px;
             color: #fff;
         }
+
         input{
             padding: 15px;
+            width: 20em;
             border: none;
             outline: none;
             border-radius: 20px;
-            font-size: 15px;
-            
+            font-size: 15px;   
         }
+
         .inputSubmit{
             background-color: dodgerblue;
             border: none;
@@ -37,8 +40,8 @@
             border-radius: 10px;
             color: white;
             font-size: 15px;
-            
         }
+
         .inputSubmit:hover{
             background-color: deepskyblue;
             cursor: pointer;
@@ -57,6 +60,10 @@
             <br><br>
             <input class="inputSubmit" type="submit" name="submit" value="Enviar">
         </form>
+        <br><br>
+        <p>Não possui Login?
+    <a href="../views/cadastro_usuario.php">Cadastre-se aqui!</a>
+    </p>
     </div>
 </main>
 </body>

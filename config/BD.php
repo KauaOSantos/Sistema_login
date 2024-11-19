@@ -1,11 +1,14 @@
-create database sistema_login;
-use sistema_login;
+<?php
 
-create table usuario (
-    id_usuario int primary key auto_increment,
-    nome varchar(80) not null,
-    data_nascimento date not null,
-    email varchar (100) not null unique,
-    senha varchar (90),
-    endereco text
-);
+class bd {
+    const host = 'localhost';
+    const banco_dados = 'sistema_login';
+    const usuario = 'root';
+    const senha = '';
+    public $conexao;
+
+    public function conectar(){
+        $this->conexao = new mysqli(self::host, self::usuario, self::senha, self::banco_dados);
+        return $this->conexao;
+    }
+}
