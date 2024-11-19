@@ -35,7 +35,6 @@
 <body>
     <main>
         <div class="boxCadsusuario">
-            <!-- adicionar o action na linha abaixo -->
             <form action="index.php" method="post"> 
                 <legend><b>Cadastro de Usuário</b></legend>
                 <br><br>
@@ -64,7 +63,7 @@
                     <input type="date" name="nascimento" id="nascimento" required>
                 </div>
 
-                <input type="submit" name="submit" id="submit" value="Cadastrar">
+                <input type="submit" name="acao" id="submit" value="Cadastrar">
             </form>
         </div>
     </main>
