@@ -10,8 +10,8 @@ switch ($acao) {
             !empty($_POST['senha']) && 
             !empty($_POST['endereco'])) {
             try {
-                $usuarioController = new usuarioController();
-                $usuarioController->cadastrar($_POST['nome'], $_POST['data_nascimento'], $_POST['email'], $_POST['senha'], $_POST['endereco']);
+                $controllerUsuario = new controllerUsuario();
+                $controllerUsuario->cadastrar($_POST['nome'], $_POST['data_nascimento'], $_POST['email'], $_POST['senha'], $_POST['endereco']);
                 echo "Cadastro realizado com sucesso!";
             } catch (Exception $e) {
                 echo "Erro ao cadastrar: " . $e->getMessage();

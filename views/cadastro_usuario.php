@@ -35,7 +35,7 @@
 <body>
     <main>
         <div class="boxCadsusuario">
-            <form action="index.php" method="post"> 
+            <form method="post" action="../controllers/controllerUsuario.php?acao=cadastrar" id="formcadastro"> 
                 <legend><b>Cadastro de Usuário</b></legend>
                 <br><br>
                 <div class="inputBox">

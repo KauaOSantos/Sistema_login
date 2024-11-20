@@ -52,7 +52,7 @@
 <main>
     <div class="form-login">
         <h1 >Login</h1>
-        <form action="cadastro_usuario.php" method="POST">
+        <form id="formlogin" method="post" action="../views/cadastro_usuario.php?acao=login">
             <input type="text" name="email" placeholder="Email" required>
             <br><br>
             <input type="password" name="senha" placeholder="Senha"required>

@@ -1,7 +1,7 @@
 <?php
 
-require "../..config/bd.php";
 require "../..models/Usuario.php";
+require "../..config/bd.php";
 
 class ControllerUsuario{
     public $usuario;
