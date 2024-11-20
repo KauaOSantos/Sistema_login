@@ -13,11 +13,11 @@ class Usuario{
 
     }
     
-    public function cadastrar(){
-        return "INSERT INTO {$this->tabela} (nome, data_nascimento, email, senha, endereco ) values (?,?,?,?,?);";
+    public function cadastrar() {
+        return "INSERT INTO {$this->tabela} (nome, data_nascimento, email, senha, endereco) VALUES (?, ?, ?, ?, ?);";
     }
 
-    public function selecionar(){
-        return = "SELECT * FROM {$this->tabela} WHERE id_usuario = ?";
+    public function selecionar() {
+        return "SELECT * FROM {$this->tabela} WHERE id_usuario = ?;";
     }
 }

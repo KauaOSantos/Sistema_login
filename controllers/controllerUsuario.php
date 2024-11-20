@@ -1,7 +1,7 @@
 <?php
 
-require "../..models/Usuario.php";
-require "../..config/bd.php";
+require "../models/Usuario.php";
+require "../config/bd.php";
 
 class ControllerUsuario{
     public $usuario;
@@ -13,7 +13,8 @@ class ControllerUsuario{
     }
 
     public function cadastrar($nome, $data_nascimento, $email, $senha, $endereco) {
-        $usuario = new Usuario($this->conectarBd());
+        $this->conexao = $this->conectarBd();
+        $usuario = new Usuario($this->conexao);
         $query = $usuario->cadastrar();
 
         $stmt = $this->conexao->prepare($query);

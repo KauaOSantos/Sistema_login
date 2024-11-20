@@ -1,3 +1,7 @@
+<?php
+require "../config/BD.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +39,7 @@
 <body>
     <main>
         <div class="boxCadsusuario">
-            <form method="post" action="../controllers/controllerUsuario.php?acao=cadastrar" id="formcadastro"> 
+            <form method="post" action="../models/Usuario.php?acao=cadastrar" id="formcadastro"> 
                 <legend><b>Cadastro de Usuário</b></legend>
                 <br><br>
                 <div class="inputBox">

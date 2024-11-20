@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../config/bd.php');
+require_once('../config/bd.php');
 
 class ControllerLogin {
     private $conexao;
@@ -45,7 +45,7 @@ class ControllerLogin {
         public function logout() {
             session_unset();
             session_destroy();
-            header("Location: ../../index.php");
+            header("Location: ../views/index.php");
             exit();
     }
 }
