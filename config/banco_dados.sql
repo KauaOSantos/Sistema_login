@@ -7,5 +7,5 @@ create table usuario (
     data_nascimento date not null,
     email varchar (100) not null unique,
     senha varchar (90),
-    endereco text
-);
+);  
+select * from usuario;
